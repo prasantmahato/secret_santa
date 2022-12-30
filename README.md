@@ -12,4 +12,4 @@ python3 main.py
 ```
 
 # Output
-![Output-Image](/output.png)
+![Output-Image](/images/op.png)

@@ -20,9 +20,10 @@ for x in santa_pair:
     print(f"{i}. {x} : {santa_pair[x]}")
     i+=1
 
+print("\n\t\t\tLet's Find Your Secret Santa...")
 while True:
-    name_ip = input("\nEnter name to search or exit: ").upper()
-    if name_ip in santa_pair:
-        print("\nYour Secret Santa is ",santa_pair[name_ip])
+    name_ip = input("\nEnter name or exit: ").upper()
     if name_ip == 'EXIT':
         break
+    if name_ip in santa_pair:
+        print(f"\n'{name_ip}' your Secret Santa is '{santa_pair[name_ip]}'.!!")
