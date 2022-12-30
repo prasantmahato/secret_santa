@@ -12,4 +12,10 @@ python3 main.py
 ```
 
 # Output
+## With flask as Backend
+![Homepage](/output.png)
+
+## Previous CLI version
 <img width="1440" alt="op" src="https://user-images.githubusercontent.com/62459775/210061310-b99ef472-3fd9-4687-9013-1704ceee68a4.png">
+
+

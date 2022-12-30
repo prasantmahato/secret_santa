@@ -1,0 +1,11 @@
+Successfully created a new micro
+{
+        "name": "secret_santa",
+        "id": "d08a5721-bef5-4def-8e60-134f459fba8c",
+        "project": "d09k412h",
+        "runtime": "python3.9",
+        "endpoint": "https://sd7ra9.deta.dev",
+        "region": "ap-south-1",
+        "visor": "disabled",
+        "http_auth": "disabled"
+}
