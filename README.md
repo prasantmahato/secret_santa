@@ -12,4 +12,4 @@ python3 main.py
 ```
 
 # Output
-![Output-Image](https://github.com/prasantmahato/secret_santa/blob/main/output.png)
+![Output-Image](/output.png)
