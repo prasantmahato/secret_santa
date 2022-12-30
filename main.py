@@ -1,29 +1,42 @@
-import pandas as pd
-import random
+from flask import Flask, make_response, render_template, request
+from flask_wtf import FlaskForm
+from wtforms import StringField, SubmitField, validators
+from wtforms.validators import DataRequired
+from markupsafe import escape
+from flask_sqlalchemy import SQLAlchemy
 
-data = pd.read_excel(r'SECTION_A.xlsx') 
-df = pd.DataFrame(data, columns=['Name'])
+import logic as lg
 
-# print(df)
-names = df['Name'].to_list()
-tmp = list(names)
+app = Flask(__name__)
+app.config['SECRET_KEY'] = 'The Hardest Secret key on The Planet'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+db = SQLAlchemy(app)
 
-santa_pair = {}
-for x in names:
-    curr = random.choice(tmp)
-    tmp.remove(curr)
-    if curr not in santa_pair.values():
-        santa_pair[x] = curr
 
-i = 1
-for x in santa_pair:
-    print(f"{i}. {x} : {santa_pair[x]}")
-    i+=1
 
-print("\n\t\t\tLet's Find Your Secret Santa...")
-while True:
-    name_ip = input("\nEnter name or exit: ").upper()
-    if name_ip == 'EXIT':
-        break
-    if name_ip in santa_pair:
-        print(f"\n'{name_ip}' your Secret Santa is '{santa_pair[name_ip]}'.!!")
+class NameForm(FlaskForm):
+    name = StringField('Enter your Name: ',validators=[DataRequired()])
+    # submit = SubmitField('Submit')
+
+def get_santa(Name):
+    ip = Name.upper()
+    name = lg.santa(ip)
+    print(name)
+    return name
+
+@app.route('/', methods=['GET', 'POST'])
+def root():
+    form = NameForm()
+    res = 'SANTOSH SIR'
+    if form.validate_on_submit():
+        key = request.form.get('name')
+        if key is not None:
+            res = get_santa(key)
+    return render_template('index.html', form=form,Name=res)
+
+    
+if __name__ == '__main__':
+    db.create_all()
+
+

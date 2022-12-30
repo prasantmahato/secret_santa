@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secret Santa</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"> -->
+</head>
+<body>
+    <div class="container">
+
+        <h1>Let's find your Secret Santa</h1>
+        <form method="post" action="/">
+            {{ form.csrf_token }}
+            {{ form.name.label }} {{ form.name(size=60) }}
+            <!-- <label for="name">Enter your name: </label>
+                <input type="text" autofocus> -->
+                <input type="submit" value="Find" class="btn">
+            </form>
+            <h1>Your Secret Santa is:</h1>
+        </div>
+        <div class="container1">
+            <h1><span>{{ Name }}</span></h1>
+        </div>
+</body>
+</html>
