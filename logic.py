@@ -6,7 +6,7 @@ def santa(name):
         return str(santa_pair[name])
     return "SANTOSH SIR"
 
-data = pd.read_excel(r'SECTION_A.xlsx') 
+data = pd.read_excel(r'Section_AB.xlsx') 
 df = pd.DataFrame(data, columns=['Name'])
 
 # print(df)
