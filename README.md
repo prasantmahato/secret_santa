@@ -2,6 +2,9 @@
 
 Game where a person is a secret santa of another person.
 
+**Live Hosted Site**
+[Visit Here](https://4jr2gn.deta.dev/)
+
 # How to execute
 
 ```
