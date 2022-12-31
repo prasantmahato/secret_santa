@@ -9,20 +9,45 @@
     <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/main.css') }}"> -->
 </head>
 <body>
-    <div class="container">
-
-        <h1>Let's find your Secret Santa</h1>
+    <div class="tabs">
+        <ul>
+          <li class="is-active"><a href="/">Home</a></li>
+          <li><a href="https://www.github.com/prasantmahato/secret_santa" target="_blank">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/prasant-mahato/" target="_blank">LinkedIn</a></li>
+          <!-- <li><a>Documents</a></li> -->
+        </ul>
+      </div>
+    <div class="container has-text-centered">
+        <h1 class="title is-1" style="font-size: 72px; padding-top: 30px;">Let's find your Secret Santa</h1>
         <form method="post" action="/">
             {{ form.csrf_token }}
-            {{ form.name.label }} {{ form.name(size=60) }}
-            <!-- <label for="name">Enter your name: </label>
-                <input type="text" autofocus> -->
-                <input type="submit" value="Find" class="btn">
+            <div class="container content has-text-centered">
+            <!-- <div class="container"> -->
+
+                {{ form.name.label }} 
+                <div class="control">
+                    {{ form.name(size=60,class='input is-medium is-warning', placeholder="Enter your name") }}
+                </div>
+                <!-- <label for="name">Enter your name: </label>
+                    <input type="text" autofocus> -->
+                    <br>
+                    <input type="submit" value="Find" class="button is-large">
+                </div>
+                <!-- </div> -->
             </form>
-            <h1>Your Secret Santa is:</h1>
+            <h1 class="title is-2">Your Secret Santa is:</h1>
         </div>
-        <div class="container1">
+        <div class="container1" style="margin-bottom: 20px;">
             <h1><span>{{ Name }}</span></h1>
         </div>
+
+        <footer class="footer" style="justify-content: space-between; flex-direction: column; height:50vh;">
+            <div class="content has-text-centered">
+              <p>
+                <strong>Secret Santa ❤️ </strong> by <a href="https://prasantmahato.github.io" target="_blank">Prasant Kumar Mahato</a>. The source code is licensed
+                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
+              </p>
+            </div>
+          </footer>
 </body>
 </html>

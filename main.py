@@ -1,7 +1,7 @@
 from flask import Flask, make_response, render_template, request
 from flask_wtf import FlaskForm
 from wtforms import StringField, SubmitField, validators
-from wtforms.validators import DataRequired
+from wtforms.validators import DataRequired, InputRequired
 from markupsafe import escape
 
 import logic as lg
@@ -9,21 +9,18 @@ import logic as lg
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'The Hardest Secret key on The Planet'
 
-
 class NameForm(FlaskForm):
-    name = StringField('Enter your Name: ',validators=[DataRequired()])
-    # submit = SubmitField('Submit')
+    name = StringField('',validators=[DataRequired()])
 
 def get_santa(Name):
-    ip = Name.upper()
-    name = lg.santa(ip)
-    print(name)
-    return name
+    person = Name.upper()
+    santa = lg.santa(person)
+    return santa
 
 @app.route('/', methods=['GET', 'POST'])
 def root():
     form = NameForm()
-    res = 'SANTOSH SIR'
+    res = ' '
     if form.validate_on_submit():
         key = request.form.get('name')
         if key is not None:
