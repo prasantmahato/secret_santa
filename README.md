@@ -26,5 +26,5 @@ flask run
 ### v.1
 <img width="1440" alt="output" src="https://user-images.githubusercontent.com/62459775/210088352-8f1dfc1a-13a4-4258-bfda-6e41a16c3c99.png">
 
-### V.0 CLI version
+### v.0 CLI version
 <img width="1440" alt="op" src="https://user-images.githubusercontent.com/62459775/210061310-b99ef472-3fd9-4687-9013-1704ceee68a4.png">
