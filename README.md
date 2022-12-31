@@ -5,13 +5,15 @@ Game where a person is a secret santa of another person.
 **Live Hosted Site**
 [https://4jr2gn.deta.dev/](https://4jr2gn.deta.dev/)
 
-# How to execute
+## Steps to execute
 
 ```
+git clone [https://github.com/prasantmahato/secret_santa.git](https://github.com/prasantmahato/secret_santa.git)
 cd /secret_santa
+python3 -m venv venv
 source venv/bin/activate
 pip3 install -r requirements.txt
-python3 main.py
+flask run
 ```
 
 # Output
