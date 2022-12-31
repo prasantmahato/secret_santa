@@ -3,8 +3,8 @@ import random
 
 def santa(name):
     if name in santa_pair:
-        return str(santa_pair[name])
-    return "SANTOSH SIR"
+        return str(santa_pair[name]).title()
+    return "Santosh SIR"
 
 data = pd.read_excel(r'Section_AB.xlsx') 
 df = pd.DataFrame(data, columns=['Name'])
@@ -16,6 +16,8 @@ tmp = list(names)
 santa_pair = {}
 for x in names:
     curr = random.choice(tmp)
+    if curr == x:
+        curr = random.choice(tmp)
     tmp.remove(curr)
     if curr not in santa_pair.values():
         santa_pair[x] = curr
