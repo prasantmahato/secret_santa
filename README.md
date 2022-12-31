@@ -21,7 +21,7 @@ flask run
 # Output
 ## With flask as Backend
 ### v.2
-<img width="1440" alt="Screenshot of Live Site" src="https://user-images.githubusercontent.com/62459775/210125746-90131412-d093-4c5a-83c4-916ae5c3eb80.png">
+<img width="1552" alt="Screenshot Secret Santa website" src="https://user-images.githubusercontent.com/62459775/210132197-1bed240a-1527-464f-88ad-c82ec9e8e196.png">
 
 ### v.1
 <img width="1440" alt="output" src="https://user-images.githubusercontent.com/62459775/210088352-8f1dfc1a-13a4-4258-bfda-6e41a16c3c99.png">
