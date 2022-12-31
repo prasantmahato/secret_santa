@@ -22,7 +22,7 @@ def root():
     form = NameForm()
     res = ' '
     if form.validate_on_submit():
-        key = request.form.get('name')
+        key = request.form.get('name').strip()
         if key is not None:
             res = get_santa(key)
     return render_template('index.html', form=form,Name=res)
