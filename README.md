@@ -8,10 +8,12 @@ Game where a person is a secret santa of another person.
 ## Steps to execute
 
 ```
-git clone [https://github.com/prasantmahato/secret_santa.git](https://github.com/prasantmahato/secret_santa.git)
+git clone https://github.com/prasantmahato/secret_santa.git
 cd /secret_santa
+
 python3 -m venv venv
 source venv/bin/activate
+
 pip3 install -r requirements.txt
 flask run
 ```
