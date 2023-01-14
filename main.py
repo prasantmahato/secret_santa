@@ -7,7 +7,7 @@ from markupsafe import escape
 import logic as lg
 
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'The Hardest Secret key on The Planet'
+app.config['SECRET_KEY'] = 'The Hardest Secret key of The Planet'
 
 class NameForm(FlaskForm):
     name = StringField('',validators=[DataRequired()])

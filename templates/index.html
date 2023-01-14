@@ -21,12 +21,12 @@
         <h1 class="title is-1" style="font-size: 72px; padding-top: 30px;">Let's find your Secret Santa</h1>
         <form method="post" action="/">
             {{ form.csrf_token }}
-            <div class="container content has-text-centered">
+            <div class="container content has-text-centered" style="padding-bottom: 50px;">
             <!-- <div class="container"> -->
 
                 {{ form.name.label }} 
                 <div class="control">
-                    {{ form.name(size=60,class='input is-medium is-warning', placeholder="Enter your full name") }}
+                    {{ form.name(size=40,class='input is-large is-warning', placeholder="Enter your full name") }}
                 </div>
                 <!-- <label for="name">Enter your name: </label>
                     <input type="text" autofocus> -->
@@ -40,14 +40,13 @@
         <div class="container1" style="margin-bottom: 20px;">
             <h1><span>{{ Name }}</span></h1>
         </div>
-
         <footer class="footer" style="justify-content: space-between; flex-direction: column; height:50vh;">
             <div class="content has-text-centered">
-              <p>
-                <strong>Secret Santa ❤️ </strong> by <a href="https://prasantmahato.github.io" target="_blank">Prasant Kumar Mahato</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
-              </p>
+                <p>
+                    <strong>Secret Santa </strong>with ❤️ by <a href="https://prasantmahato.github.io" target="_blank">Prasant Kumar Mahato</a>. The source code is licensed
+                    <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. 
+                </p>
             </div>
-          </footer>
+        </footer>
 </body>
 </html>
